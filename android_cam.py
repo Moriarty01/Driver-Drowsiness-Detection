@@ -170,18 +170,3 @@ while True:
 a = total_ear
 b=total_mar
 c = total_ts
-
-df = pd.DataFrame({"EAR" : a, "MAR":b,"TIME" : c})
-df.to_csv("op_phonecam.csv", index=False)
-df=pd.read_csv("op_phonecam.csv")
-
-df.plot(x='TIME',y=['EAR','MAR'])
-#plt.xticks(rotation=45, ha='right')
-
-plt.subplots_adjust(bottom=0.30)
-plt.title('EAR & MAR calculation over time of phone cam')
-plt.ylabel('EAR & MAR')
-plt.gca().axes.get_xaxis().set_visible(False)
-plt.show()
-
-cv2.destroyAllWindows()
